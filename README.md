@@ -1,92 +1,97 @@
 # Claude SDLC Skills
 
-**讓 AI 幫你把關每一個開發環節 — 從需求到上線，不再遺漏關鍵步驟。**
+> English | **[正體中文](README.zh-TW.md)**
 
-## 這是什麼？
-
-一組安裝在 [Claude Code](https://claude.com/claude-code) 上的技能包，讓 AI 在軟體開發的每個階段提供結構化的引導：
-
-| 階段 | 你說的話 | AI 幫你做的事 |
-|------|---------|--------------|
-| 需求定義 | 「幫我寫 checkout 的 user stories」 | 產出符合 INVEST 原則的用戶故事、驗收標準、PRD |
-| 架構設計 | 「設計這個服務的架構」 | 用 ASCII 圖確認架構、定義 API 合約、識別領域邊界 |
-| 測試規劃 | 「上線前該測什麼？」 | 列出邊界案例、壓力測試計畫、E2E 場景、安全測試 |
-| 上線準備 | 「我們準備好上線了嗎？」 | 產出 release checklist、rollback 計畫、go/no-go 評估 |
-
-也可以一次跑完整個流程：
-
-> 「用 Agile 方法，引導這個功能從構想到上線」
-
-AI 會自動切換階段、在每個關卡暫停等你確認，確保沒有環節被跳過。
+**Let AI guard every stage of your development process — from requirements to release, so nothing falls through the cracks.**
 
 ---
 
-## 為什麼需要這個？
+## What Is This?
 
-### 解決的痛點
+A set of 5 skills for [Claude Code](https://claude.com/claude-code) that provide structured guidance at every stage of software development:
 
-| 常見問題 | 這組技能怎麼幫 |
-|---------|--------------|
-| 需求不清就開始寫 code，做完才發現方向錯了 | 強制先產出 user stories 和驗收標準，確認範圍再動手 |
-| 架構討論只存在口頭或白板，事後沒人記得 | 用 ASCII 圖確認架構，產出 Design Doc 留存 |
-| 上線前才發現沒想到的 edge case | 系統性檢查 11 類邊界案例（併發、注入攻擊、認證錯誤...） |
-| 壓力測試被跳過，上線後才爆炸 | 強制要求 load / spike / soak / capacity 四種壓測 |
-| Release 出問題不知道怎麼 rollback | 提前產出 rollback 計畫，含觸發條件和具體步驟 |
-| 不同團隊用不同流程，品質參差不齊 | 提供 Agile / Waterfall / Iterative 三種方法論模板，統一基準 |
+| Phase | What You Say | What AI Does |
+|-------|-------------|--------------|
+| Requirements | "Write user stories for checkout" | INVEST-compliant user stories, acceptance criteria, PRD |
+| Architecture | "Design the architecture for this service" | ASCII diagram confirmation, API contracts, domain boundaries |
+| Test Planning | "What should I test before launch?" | Edge cases, stress test plan, E2E scenarios, security tests |
+| Release Readiness | "Are we ready to ship?" | Release checklist, rollback plan, go/no-go assessment |
 
-### 帶來的價值
+Or run the entire lifecycle at once:
 
-- **降低返工成本** — 在需求階段就抓出模糊地帶，不是做完才改
-- **提升交付品質** — 每個功能都經過相同的品質關卡檢查
-- **加速新人上手** — 資淺工程師也能產出資深水準的技術文件
-- **建立團隊共同語言** — 需求怎麼寫、架構怎麼畫、測試怎麼規劃，全隊一致
-- **知識不再只在少數人腦中** — 流程固化為可重複使用的模板
+> "Guide this feature from idea to production using Agile methodology"
+
+AI switches phases automatically, pausing at review gates for your confirmation — ensuring no step is skipped.
 
 ---
 
-## 運作方式
+## Why Does This Matter?
+
+### Problems It Solves
+
+| Common Problem | How These Skills Help |
+|---------------|----------------------|
+| Coding starts before requirements are clear — rework when direction was wrong | Forces user stories and acceptance criteria first; confirm scope before writing code |
+| Architecture decisions live only in conversations or whiteboards | ASCII diagram confirmation protocol produces a Design Doc as a lasting artifact |
+| Edge cases discovered only after launch | Systematic check across 11 categories (concurrency, injection, auth errors...) |
+| Stress testing skipped, system breaks under load | Mandatory Load / Spike / Soak / Capacity testing before every launch |
+| No rollback plan when releases go wrong | Rollback plan with trigger thresholds and step-by-step procedures generated upfront |
+| Different teams follow different processes, inconsistent quality | Three methodology templates (Agile / Waterfall / Iterative) provide a unified baseline |
+
+### Value Delivered
+
+- **Reduce rework costs** — catch ambiguity at the requirements stage, not after implementation
+- **Raise delivery quality** — every feature goes through the same quality gates
+- **Accelerate onboarding** — junior engineers produce senior-level technical documents
+- **Create a shared language** — how to write requirements, draw architecture, plan tests — consistent across the team
+- **Capture institutional knowledge** — processes become reusable templates, not tribal knowledge
+
+---
+
+## How It Works
 
 ```
-你描述一個功能
+You describe a feature
         │
         v
 ┌─────────────────────────────────┐
-│  選擇開發方法論                    │
+│  Select methodology              │
 │  Agile / Waterfall / Iterative   │
 └──────────────┬──────────────────┘
                │
         ┌──────v──────┐
-        │  需求定義     │  ← user stories、驗收標準、PRD
+        │ Requirements │  ← user stories, acceptance criteria, PRD
         └──────┬──────┘
-          Gate 1 ✓ 你確認
+          Gate 1 ✓ you confirm
         ┌──────v──────┐
-        │  架構設計     │  ← ASCII 圖、API 合約、領域模型
+        │ Architecture │  ← ASCII diagrams, API contracts, domain model
         └──────┬──────┘
-          Gate 2 ✓ 你確認
+          Gate 2 ✓ you confirm
         ┌──────v──────┐
-        │  測試規劃     │  ← 邊界案例、壓測計畫、E2E 場景
+        │ Test Planning│  ← edge cases, stress test plan, E2E scenarios
         └──────┬──────┘
-          Gate 3 ✓ 你確認
+          Gate 3 ✓ you confirm
         ┌──────v──────┐
-        │  上線準備     │  ← release checklist、rollback 計畫
+        │   Release    │  ← release checklist, rollback plan
+        │  Readiness   │
         └──────┬──────┘
-          Gate 4 ✓ 你確認
+          Gate 4 ✓ you confirm
                │
                v
-           上線部署
+           Deploy
 ```
 
-每個 Gate 都會暫停，列出待確認事項和風險，等你說「OK」才繼續。
+Every gate pauses, lists open items and risks, and waits for your "OK" before proceeding.
 
 ---
 
-## 安裝方式
+## Installation
 
-### 前置條件
+### Prerequisites
 
-- 已安裝 [Claude Code](https://claude.com/claude-code) CLI
+- [Claude Code](https://claude.com/claude-code) CLI installed
 
-### 一鍵安裝（推薦）
+### One-Line Install (Recommended)
 
 ```bash
 claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-orchestrator.skill
@@ -96,7 +101,7 @@ claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc
 claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-release-readiness.skill
 ```
 
-### 本地安裝
+### Local Install
 
 ```bash
 git clone https://github.com/ceparadise168/claude-sdlc-skills.git
@@ -110,107 +115,107 @@ claude install-skill sdlc-release-readiness.skill
 
 ---
 
-## 使用範例
+## Usage Examples
 
-### 完整流程
+### Full Lifecycle
 
 ```
-你：用 Agile 方法，引導「會員點數兌換功能」從需求到上線
+You:  Guide "membership points redemption" from requirements to release using Agile
 
-AI：好的，我先幫你做需求定義。
-    [產出 user stories、驗收標準]
-    以上需求確認嗎？
+AI:   Starting with requirements definition.
+      [produces user stories, acceptance criteria]
+      Requirements confirmed?
 
-你：確認
+You:  Confirmed
 
-AI：進入架構設計階段。
-    [產出架構圖、API 合約、領域模型]
-    架構確認嗎？
+AI:   Moving to architecture design.
+      [produces architecture diagram, API contracts, domain model]
+      Architecture confirmed?
 
-你：confirmed
+You:  Yes
 
-AI：進入測試規劃...
-    （持續到上線準備完成）
+AI:   Moving to test planning...
+      (continues through release readiness)
 ```
 
-### 單獨使用某個階段
+### Using Individual Skills
 
-| 場景 | 你可以這樣說 |
-|------|------------|
-| 只需要需求文件 | 「幫我寫 billing 功能的 PRD」 |
-| 只需要架構設計 | 「設計 notification service 的架構，用 ASCII 圖確認」 |
-| 只需要測試計畫 | 「Black Friday 流量暴增 10 倍，幫我規劃壓力測試」 |
-| 只需要上線清單 | 「週五要部署新版支付功能，幫我做 release checklist」 |
+| Scenario | What to Say |
+|----------|------------|
+| Requirements only | "Write a PRD for the billing feature" |
+| Architecture only | "Design the notification service architecture with ASCII diagrams" |
+| Test plan only | "Black Friday traffic will spike 10x — plan stress tests" |
+| Release checklist only | "We're deploying the new payment feature Friday — create a release checklist" |
 
 ---
 
-## 涵蓋的工程實踐
+## Engineering Practices Covered
 
 <details>
-<summary><b>需求定義</b> — 把模糊的想法變成可執行的規格</summary>
+<summary><b>Requirements</b> — turn vague ideas into actionable specs</summary>
 
-- **User Stories** — 符合 INVEST 原則（Independent, Negotiable, Valuable, Estimable, Small, Testable）
-- **驗收標準** — Given/When/Then 格式，可直接轉化為測試案例
-- **PRD 模板** — 問題陳述、商業目標、範圍界定、利害關係人、成功指標
-- **需求分級** — Must / Should / Could 優先級
+- **User Stories** — INVEST-compliant (Independent, Negotiable, Valuable, Estimable, Small, Testable)
+- **Acceptance Criteria** — Given/When/Then format, directly translatable to test cases
+- **PRD Template** — problem statement, business objective, scope, stakeholders, success metrics
+- **Priority Levels** — Must / Should / Could
 </details>
 
 <details>
-<summary><b>架構設計</b> — 用圖說話，確認後再動手</summary>
+<summary><b>Architecture</b> — confirm with diagrams before building</summary>
 
-- **ASCII 圖確認協議** — 先畫圖 → 標記不確定處 → 你確認 → 才鎖定設計
-- **Domain-Driven Design** — 識別 Bounded Context、Aggregate、Entity、Value Object
-- **Clean Architecture** — 領域層 → 應用層 → 介面層 → 基礎設施層，依賴方向向內
-- **Design by Contract** — 每個 API 定義前置條件、後置條件、不變量
-- **12-Factor App** — 組態分離、無狀態程序、日誌串流、快速啟停
+- **ASCII Diagram Confirmation Protocol** — draw → mark uncertainties → you confirm → design locked
+- **Domain-Driven Design (DDD)** — bounded contexts, aggregates, entities, value objects
+- **Clean Architecture** — domain → application → interface adapters → infrastructure (dependencies point inward)
+- **Design by Contract (DbC)** — preconditions, postconditions, invariants for every API
+- **12-Factor App** — config separation, stateless processes, log streams, disposability
 </details>
 
 <details>
-<summary><b>測試規劃</b> — 不只測 happy path</summary>
+<summary><b>Test Planning</b> — far beyond happy paths</summary>
 
-- **11 類邊界案例** — 併發/競態、大數值/零值/負值、SQL 注入/XSS、401/403 認證錯誤、資料庫鎖死、冪等性、網路失敗...
-- **4 種壓力測試** — Load（基準效能）、Spike（突發流量）、Soak（記憶體洩漏偵測）、Capacity（找到系統極限）
-- **Playwright E2E** — 有 UI 就必須有端對端測試
-- **韌性測試** — Circuit Breaker、重試機制、級聯失敗
-- **測試追溯矩陣** — 每個 user story 對應哪些測試案例
+- **11 Edge Case Categories** — concurrency/race conditions, boundary values, SQL injection/XSS, 401/403 auth errors, DB deadlocks, idempotency, network failures...
+- **4 Stress Test Types** — Load (baseline performance), Spike (burst traffic), Soak (memory leak detection), Capacity (find the breaking point)
+- **Playwright E2E** — mandatory end-to-end testing when UI exists
+- **Resilience Testing** — circuit breakers, retry behavior, cascading failures
+- **Traceability Matrix** — every user story mapped to its test cases
 </details>
 
 <details>
-<summary><b>上線準備</b> — 不是 deploy 了就結束</summary>
+<summary><b>Release Readiness</b> — deployment is not the finish line</summary>
 
-- **Release Checklist** — 程式碼、測試、文件、安全、基礎設施逐項確認
-- **Rollback 計畫** — 觸發條件（錯誤率 > X%、延遲 > Y ms）、回滾步驟、驗證方式
-- **部署策略建議** — Feature Flag / Canary / Blue-Green / 分階段 / Pilot / Big Bang
-- **上線後監控計畫** — 前 24-48 小時該盯哪些指標
-- **正式簽核表** — 適用於需要正式審批的 Waterfall 流程
+- **Release Checklist** — code, tests, docs, security, infrastructure verified item by item
+- **Rollback Plan** — trigger criteria (error rate > X%, latency > Y ms), rollback steps, verification
+- **Rollout Strategy Guidance** — Feature Flag / Canary / Blue-Green / Phased / Pilot / Big Bang
+- **Post-Release Monitoring Plan** — what to watch for the first 24-48 hours
+- **Formal Sign-Off Table** — for Waterfall workflows requiring stakeholder approval
 </details>
 
 ---
 
-## 方法論比較
+## Methodology Comparison
 
 | | Agile | Waterfall | Iterative |
 |--|-------|-----------|-----------|
-| **適合場景** | 需求會變、頻繁發布 | 法規遵循、正式審批 | 工程導向、分階段交付 |
-| **文件量** | 輕量 | 完整 | 中等 |
-| **審查關卡** | 口頭確認即可 | 正式簽核 | 書面確認 |
-| **User Stories** | 聚焦當前 sprint | 全量定義 | 當前迭代 + 整體願景 |
+| **Best For** | Evolving requirements, frequent releases | Regulatory compliance, formal approvals | Engineering-first, phased delivery |
+| **Documentation** | Lightweight | Comprehensive | Moderate |
+| **Review Gates** | Verbal confirmation | Formal sign-off | Written confirmation |
+| **User Stories** | Current sprint focus | Fully defined upfront | Current iteration + overall vision |
 
 ---
 
-## 技能原始碼
+## Skill Source Code
 
-想客製化？原始碼在這些目錄裡，歡迎 fork 修改：
+Want to customize? Source code is in these directories — fork and modify as needed:
 
 ```
-sdlc-orchestrator/           ← 協調器：方法論選擇、關卡管理、階段排序
-sdlc-requirements-shaper/    ← 需求：user stories、驗收標準、PRD 模板
-sdlc-architecture-designer/  ← 架構：ASCII 圖、DDD、DbC、設計文件模板
-sdlc-test-planner/           ← 測試：邊界案例清單、壓測模式、E2E 模板
-sdlc-release-readiness/      ← 上線：release checklist、rollback 計畫模板
+sdlc-orchestrator/           ← Coordinator: methodology selection, gate management, phase sequencing
+sdlc-requirements-shaper/    ← Requirements: user stories, acceptance criteria, PRD template
+sdlc-architecture-designer/  ← Architecture: ASCII diagrams, DDD, DbC, design doc template
+sdlc-test-planner/           ← Testing: edge case checklists, stress test patterns, E2E templates
+sdlc-release-readiness/      ← Release: release checklist, rollback plan template
 ```
 
-每個目錄包含 `SKILL.md`（技能定義）和 `references/`（模板和參考文件）。
+Each directory contains `SKILL.md` (skill definition) and `references/` (templates and reference docs).
 
 ---
 
