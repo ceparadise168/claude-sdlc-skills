@@ -1,0 +1,82 @@
+[
+  {
+    "query": "I need to build a new payments microservice for Acme Corp. Can you walk me through the entire development lifecycle — from gathering requirements all the way to release? We're a regulated fintech so I want proper gates.",
+    "should_trigger": true
+  },
+  {
+    "query": "Run this feature through full SDLC please. We're adding a multi-tenant workspace feature to our SaaS app at /src/modules/workspaces/. I want requirements, architecture, tests, and release planning.",
+    "should_trigger": true
+  },
+  {
+    "query": "Hey, I want to take this from idea to production the structured way. The feature is a recommendation engine for our e-commerce platform. Guide me through each phase with review checkpoints.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use the SDLC orchestrator skill to help me deliver a new SSO integration for our internal tools platform. We use waterfall because of SOC2 compliance requirements.",
+    "should_trigger": true
+  },
+  {
+    "query": "I've got a greenfield project — building a real-time notification system. I want end-to-end feature delivery guidance with methodology selection, architecture review, test strategy, the whole nine yards.",
+    "should_trigger": true
+  },
+  {
+    "query": "We're kicking off a new feature for our healthcare app at MediTech Solutions. I need full lifecycle planning — requirements shaping, design, test planning, and release readiness. Can you orchestrate all of that?",
+    "should_trigger": true
+  },
+  {
+    "query": "I want structured delivery with review gates for migrating our monolith to microservices. Start from requirements and take me through to release. Use agile methodology.",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you help me plan and execute a complete feature build? I'm adding a data pipeline for analytics at /services/data-pipeline/. I want the full process — don't skip any phases.",
+    "should_trigger": true
+  },
+  {
+    "query": "Our team needs to deliver a new API gateway feature. I'd like to go through the full software development lifecycle with proper phase transitions and sign-offs before we start coding.",
+    "should_trigger": true
+  },
+  {
+    "query": "Take me through the complete development process for adding a file upload and processing feature to our Django app. I want methodology-aware planning, architecture decisions, test coverage, and release criteria all coordinated together.",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you review the architecture for our new caching layer? I have an ASCII diagram in /docs/architecture/caching-design.md that I'd like feedback on. Just the design, not the full process.",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to write acceptance criteria and user stories for the search feature in our app. Just the requirements part, nothing else.",
+    "should_trigger": false
+  },
+  {
+    "query": "There's a bug in /src/services/auth/token.ts where refresh tokens aren't being invalidated on logout. Can you help me fix it?",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me create a test plan for the checkout flow at /src/modules/checkout/. I need unit tests, integration tests, and edge cases. Just the testing strategy.",
+    "should_trigger": false
+  },
+  {
+    "query": "What's the best software development methodology for a 3-person startup building an MVP? I'm trying to decide between agile and iterative approaches.",
+    "should_trigger": false
+  },
+  {
+    "query": "I need a release checklist for deploying our new billing feature to production this Friday. We have the code ready, just need the go-live plan and rollback strategy.",
+    "should_trigger": false
+  },
+  {
+    "query": "Can you explain the difference between waterfall and agile SDLC methodologies? I'm writing a blog post about development processes.",
+    "should_trigger": false
+  },
+  {
+    "query": "Refactor the database access layer in /src/infrastructure/db/ to use the repository pattern. The current code has too much coupling between the domain and persistence layers.",
+    "should_trigger": false
+  },
+  {
+    "query": "I'm setting up a CI/CD pipeline for our React app. Can you help me configure GitHub Actions with linting, testing, and deployment stages in .github/workflows/deploy.yml?",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me design the API contracts for the new inventory management endpoints. I need OpenAPI specs for CRUD operations with proper error handling and validation schemas.",
+    "should_trigger": false
+  }
+]

@@ -1,0 +1,10 @@
+# Workspace / eval artifacts
+*-workspace/
+*.output
+__pycache__/
+
+# OS
+.DS_Store
+
+# Original monolith (kept for reference but not distributed)
+sdlc-feature-delivery-orchestrator/

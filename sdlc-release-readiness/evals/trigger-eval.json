@@ -1,0 +1,82 @@
+[
+  {
+    "query": "We're planning to deploy the new payment processing service to production next Tuesday. Can you create a release checklist covering all the pre-deployment validation we need?",
+    "should_trigger": true
+  },
+  {
+    "query": "What's our rollback plan if the v2.4 API migration causes issues in production? I need documented steps the on-call team can follow.",
+    "should_trigger": true
+  },
+  {
+    "query": "Are we ready to ship the user authentication overhaul? I want a go/no-go assessment based on our current test coverage and open bugs.",
+    "should_trigger": true
+  },
+  {
+    "query": "Prepare a post-release monitoring plan for the new search indexing service. What metrics should we watch for the first 48 hours after launch?",
+    "should_trigger": true
+  },
+  {
+    "query": "We need a deployment checklist for the database migration from PostgreSQL 14 to 16. Include rollback triggers and verification steps.",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you help me assess launch readiness for our mobile app v3.0? We need sign-off from engineering, QA, and product before releasing to the app store.",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to prepare a go/no-go decision document for the microservices cutover. What criteria should we evaluate and what are the release blockers?",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me build a canary deployment plan for rolling out the new recommendation engine. I need rollback criteria and phased rollout percentages.",
+    "should_trigger": true
+  },
+  {
+    "query": "We shipped the billing update yesterday and error rates are climbing. What should our post-release review cover and how do we decide whether to roll back?",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a pre-release validation checklist for our feature flag rollout of the new dashboard. Include security sign-off, stress test verification, and observability checks.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a comprehensive test plan for the new checkout flow including unit tests, integration tests, and end-to-end test scenarios.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review the architecture of our event-driven notification system and suggest improvements for scalability and fault tolerance.",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me set up a GitHub Actions CI/CD pipeline that runs linting, tests, and builds a Docker image on every pull request.",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to create a Grafana monitoring dashboard for our Kubernetes cluster that shows CPU, memory, and pod health metrics.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write an incident response runbook for handling a database outage, including escalation procedures and communication templates.",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me gather and document the functional and non-functional requirements for the new inventory management module.",
+    "should_trigger": false
+  },
+  {
+    "query": "Can you do a code review of my pull request? I want feedback on the error handling patterns and whether the API contracts are well-defined.",
+    "should_trigger": false
+  },
+  {
+    "query": "Set up Terraform infrastructure for a new staging environment with load balancing, auto-scaling, and database provisioning.",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to write API documentation for our REST endpoints including request/response schemas, authentication, and rate limiting details.",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me design a load testing strategy using k6 to simulate 10,000 concurrent users hitting our checkout API.",
+    "should_trigger": false
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "query": "I need to design the architecture for a multi-tenant SaaS billing platform that handles subscription management and usage-based pricing. Can you help me define the bounded contexts and service boundaries?",
+    "should_trigger": true
+  },
+  {
+    "query": "Draw me an architecture diagram showing how our API gateway, auth service, and order processing microservices interact with each other.",
+    "should_trigger": true
+  },
+  {
+    "query": "I want to define the API contract for our payment processing service — what preconditions, postconditions, and invariants should we specify for the charge endpoint?",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me model the domain for an e-commerce system using DDD. I need to identify aggregates, entities, and value objects for the order fulfillment context.",
+    "should_trigger": true
+  },
+  {
+    "query": "We're building a new notification service. Can you help me figure out the Clean Architecture layers and how the domain logic should be separated from the infrastructure concerns?",
+    "should_trigger": true
+  },
+  {
+    "query": "Review our current microservices architecture — we have 12 services and I'm worried about coupling between the inventory and shipping bounded contexts. What should the integration look like?",
+    "should_trigger": true
+  },
+  {
+    "query": "What should the system architecture look like for a real-time collaborative document editor? I need to understand the data flow and component boundaries.",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to design service boundaries for our healthcare platform. We need to consider HIPAA compliance, audit logging, and data classification in the architecture.",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me create a context map showing the relationships between our bounded contexts — the patient management, appointment scheduling, and billing domains keep leaking into each other.",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you sketch out the architecture for migrating our monolith to microservices? I need to see the target state with service boundaries, API contracts between services, and the data ownership model.",
+    "should_trigger": true
+  },
+  {
+    "query": "How do I write unit tests for a repository pattern implementation in TypeScript?",
+    "should_trigger": false
+  },
+  {
+    "query": "Can you review this pull request? It changes the user authentication flow and I want to make sure the code quality is good.",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me gather requirements for our new inventory management feature. I need to interview stakeholders and create user stories.",
+    "should_trigger": false
+  },
+  {
+    "query": "My Kubernetes pods keep crashing with OOMKilled errors. Can you help me debug why the memory usage is spiking?",
+    "should_trigger": false
+  },
+  {
+    "query": "Write me a Terraform configuration to deploy our services to AWS ECS with an Application Load Balancer.",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to implement the repository pattern for our Order aggregate. Can you write the code using TypeORM and PostgreSQL?",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me set up a CI/CD pipeline with GitHub Actions that runs tests, builds Docker images, and deploys to staging.",
+    "should_trigger": false
+  },
+  {
+    "query": "Can you create a test plan for our payment processing module? I need to cover integration tests, edge cases, and load testing scenarios.",
+    "should_trigger": false
+  },
+  {
+    "query": "I'm getting a NullPointerException in our order service when processing refunds. Here's the stack trace — can you help me find the bug?",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me write an OpenAPI spec for our REST endpoints. I already know the architecture, I just need the YAML file generated.",
+    "should_trigger": false
+  }
+]

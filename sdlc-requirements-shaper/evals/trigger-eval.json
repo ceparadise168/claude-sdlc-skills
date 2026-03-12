@@ -1,0 +1,82 @@
+[
+  {
+    "query": "I have a rough idea for a notification preferences feature. Can you help me turn it into proper user stories with acceptance criteria?",
+    "should_trigger": true
+  },
+  {
+    "query": "We need a PRD for the new multi-tenant billing system. The VP wants it by Friday — cover scope, stakeholders, and success metrics.",
+    "should_trigger": true
+  },
+  {
+    "query": "what should the acceptance criteria be for a password reset flow that supports both email and SMS verification?",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me frame the problem statement for migrating our monolith's auth module to a standalone service. I need to clearly define what's in scope vs out of scope.",
+    "should_trigger": true
+  },
+  {
+    "query": "scope this feature for me: we want to add real-time collaborative editing to our document tool, but I'm not sure what to include in v1 vs v2",
+    "should_trigger": true
+  },
+  {
+    "query": "I'm starting requirements gathering for an internal admin dashboard. Walk me through what questions I should be asking stakeholders and help me document the functional and non-functional requirements.",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you write user stories for a shopping cart checkout flow? We support credit cards, PayPal, and Apple Pay. Make sure each story is independent and testable.",
+    "should_trigger": true
+  },
+  {
+    "query": "hey i have this feature idea for letting users schedule recurring reports. can you help me figure out exactly what we should build? like what are the requirements",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to define the non-functional requirements for our API gateway — think rate limiting, latency SLAs, availability targets. Also need the functional requirements for the developer portal that sits on top of it.",
+    "should_trigger": true
+  },
+  {
+    "query": "We're about to kick off a new project for SSO integration. Before anyone writes code, I need a clear problem statement, user stories, and a lightweight PRD. The methodology is iterative.",
+    "should_trigger": true
+  },
+  {
+    "query": "Design the system architecture for a real-time chat application that needs to handle 100K concurrent users. Include message queuing, database choices, and deployment topology.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a comprehensive test plan for the checkout flow, including unit tests, integration tests, and end-to-end test scenarios with expected coverage targets.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this pull request and check for code quality issues, potential bugs, and adherence to our coding standards. Here's the diff: ...",
+    "should_trigger": false
+  },
+  {
+    "query": "Can you look at the existing user stories in our Jira board and tell me which ones are blocked? Here's the export...",
+    "should_trigger": false
+  },
+  {
+    "query": "I'm getting a NullPointerException on line 42 of UserService.java when I try to fetch the user profile. Can you help me debug this?",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a CI/CD pipeline configuration for deploying our microservices to Kubernetes, with staging and production environments and automated rollbacks.",
+    "should_trigger": false
+  },
+  {
+    "query": "Estimate how long it would take a team of 3 engineers to build the notification system based on the requirements doc I already have. Break it down by sprint.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write the API contract and OpenAPI spec for the user management endpoints — GET, POST, PUT, DELETE with request/response schemas.",
+    "should_trigger": false
+  },
+  {
+    "query": "What does the acceptance criteria in user story US-42 mean exactly? I'm confused by the third Given/When/Then clause.",
+    "should_trigger": false
+  },
+  {
+    "query": "Set up monitoring and alerting for our production services. I need Grafana dashboards for latency, error rates, and throughput, plus PagerDuty integration.",
+    "should_trigger": false
+  }
+]

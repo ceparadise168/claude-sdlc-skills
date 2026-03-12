@@ -1,0 +1,82 @@
+[
+  {
+    "query": "I'm building a new payment processing microservice. What edge cases should I think about before we go live?",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a test plan for our user registration flow that covers both the API and the React frontend",
+    "should_trigger": true
+  },
+  {
+    "query": "We're launching a new checkout page next week. What Playwright E2E scenarios should we cover?",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me plan stress tests for our API gateway — we expect 10x traffic during Black Friday",
+    "should_trigger": true
+  },
+  {
+    "query": "What could go wrong with our new file upload feature? I want to make sure we've thought of everything",
+    "should_trigger": true
+  },
+  {
+    "query": "We need a resilience testing strategy for our distributed order management system — what failure modes should we simulate?",
+    "should_trigger": true
+  },
+  {
+    "query": "What should I test for this new GraphQL subscription endpoint? It handles real-time notifications",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to define test layers for our new multi-tenant SaaS feature — unit, integration, E2E, the whole thing",
+    "should_trigger": true
+  },
+  {
+    "query": "Review our test coverage for the authentication module — I think we're missing concurrency and token expiry edge cases",
+    "should_trigger": true
+  },
+  {
+    "query": "Plan a soak test and capacity test for our WebSocket server before we roll it out to production",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a Playwright test that logs in, navigates to the dashboard, and asserts the chart renders correctly",
+    "should_trigger": false
+  },
+  {
+    "query": "My Jest unit test for the calculateDiscount function is failing with 'Cannot read property of undefined' — can you help debug it?",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me set up a CI/CD pipeline with GitHub Actions that runs our test suite on every PR",
+    "should_trigger": false
+  },
+  {
+    "query": "Design the microservice architecture for our new inventory management system",
+    "should_trigger": false
+  },
+  {
+    "query": "Write me a pytest fixture that creates a mock database connection with sample user data",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to gather requirements for our new reporting dashboard — what questions should I ask stakeholders?",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me deploy this Node.js app to AWS ECS with Terraform",
+    "should_trigger": false
+  },
+  {
+    "query": "Refactor this test file to use the Page Object pattern — here's the current Playwright code",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate mock API responses for our user service so I can test the frontend in isolation",
+    "should_trigger": false
+  },
+  {
+    "query": "Our k6 load test script is throwing connection errors after 500 virtual users — what's wrong with this config?",
+    "should_trigger": false
+  }
+]
