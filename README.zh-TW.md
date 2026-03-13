@@ -110,15 +110,27 @@ AI 會自動切換階段、在每個關卡暫停等你確認，確保沒有環�
 
 ### 方式 A：以外掛安裝（全部 5 個技能）
 
+**先試試看（僅限當前對話）：**
+
 ```bash
 git clone https://github.com/ceparadise168/claude-sdlc-skills.git
 claude --plugin-dir ./claude-sdlc-skills
 ```
 
-或永久加入 — 在 Claude Code 對話中執行：
+技能只在這次對話中生效，不會永久安裝。
+
+**永久安裝：**
+
+在 Claude Code 對話中執行：
 
 ```
 /plugin marketplace add ceparadise168/claude-sdlc-skills
+```
+
+**移除外掛：**
+
+```
+/plugin uninstall claude-sdlc-skills
 ```
 
 ### 方式 B：個別安裝
@@ -140,6 +152,12 @@ claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc
 
 # 上線準備 — 上線清單、回滾計畫
 claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-release-readiness.skill
+```
+
+**移除單一技能：**
+
+```bash
+claude skill remove sdlc-orchestrator
 ```
 
 ---
