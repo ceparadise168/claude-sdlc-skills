@@ -27,6 +27,30 @@ You are NOT responsible for generating detailed artifacts yourself. Each sub-ski
 
 ---
 
+## Operating stance: pragmatic engineering
+
+This is the most important section. It shapes how every phase is executed.
+
+Best practices are tools, not rules. The same design pattern that saves one project can strangle another. What matters is not whether you applied DDD or Clean Architecture, but whether the choice was **conscious** — made with full awareness of the team's experience, infrastructure maturity, business timeline, stakeholder expectations, and the feature's actual risk profile.
+
+**Principles for every phase:**
+
+1. **Surface context before recommending.** At each phase, understand the conditions: Who is the team? What's the timeline? What infrastructure exists? What's the organizational appetite for formality? Recommendations that ignore context are noise.
+
+2. **Distinguish the non-negotiable from the adjustable.** Some things are principles (testable acceptance criteria, rollback plans for production). Others are tools that flex with context (whether to use DDD, how many architecture layers, how formal the PRD). Name which is which explicitly.
+
+3. **Intentional trade-offs over unconscious shortcuts.** If you recommend skipping something — a full PRD, comprehensive stress tests, formal sign-offs — state what you're trading away, what you're gaining, and what conditions would change the calculus. Intentional technical debt taken with full awareness is wisdom. Cutting corners without thinking is not.
+
+4. **Avoid premature abstraction, but think about it.** Not building an abstraction now doesn't mean not considering it. It means you've thought about where things might go, and consciously decided the abstraction would constrain more than it helps at this stage. Document what you considered and why you deferred it.
+
+5. **Code is fluid, serving a solution that will evolve.** The solution will change, shrink, grow. Design for that fluidity. Recommend structures that can change shape without expensive rewrites — but don't over-engineer flexibility for futures that may never arrive.
+
+6. **Scale rigor to what the moment demands.** A weekend hackathon, an internal tool for 5 users, and a payment system for millions of customers all deserve different levels of ceremony. The orchestrator's job is to help the user see the full picture and choose the right level — not to impose maximum rigor everywhere.
+
+**When delegating to sub-skills**, always pass this context: the team's situation, the timeline pressure, the risk profile, and any conscious trade-offs already made. Sub-skills should calibrate their output accordingly.
+
+---
+
 ## When to use
 
 Use this skill only when the user explicitly asks for a full SDLC workflow.
@@ -46,23 +70,27 @@ Do not activate for:
 
 ---
 
-## First interaction: methodology selection
+## First interaction: context and methodology
 
-When invoked, always begin by asking:
+When invoked, begin by understanding the situation before selecting methodology. Ask:
 
-> What SDLC methodology do you want to use for this feature?
-> - **Agile** — iterative sprints, evolving requirements, lightweight artifacts
-> - **Waterfall** — sequential phases, formal gate reviews, comprehensive documentation
-> - **Iterative** — phased delivery cycles, engineering-first, moderate documentation
-> - **Custom** — describe your own process and I will adapt
+> Before we start, I need to understand the conditions so I can calibrate the process:
+> 1. **What's the feature?** (brief description)
+> 2. **Who's the team?** (size, experience level, familiarity with the domain)
+> 3. **What's the timeline?** (exploratory vs deadline-driven)
+> 4. **What's the risk profile?** (internal tool vs customer-facing vs regulated)
+> 5. **What infrastructure/process already exists?** (CI/CD, monitoring, existing patterns)
+> 6. **What methodology do you want?** Agile / Waterfall / Iterative / Custom — or I can recommend based on the above
 
-If the user does not specify, choose based on context:
+If the user just wants to move fast, don't block on all 6 — gather what you can, infer the rest, label your assumptions, and proceed. The point is awareness, not bureaucracy.
+
+**Methodology selection guidance:**
 - **Agile**: collaborative product teams, evolving requirements, frequent releases
 - **Iterative**: practical engineering-first, phased delivery, moderate formality
 - **Waterfall**: strict stage gates, formal approvals, compliance-heavy, regulated domains
 - **Custom**: user already follows an internal process
 
-After selecting, briefly explain how the methodology affects workflow cadence, artifact depth, and review gate formality.
+After selecting, briefly explain how the methodology affects workflow cadence, artifact depth, and review gate formality — and how the team's context further calibrates that.
 
 See `references/methodology-modes.md` for detailed methodology-specific behavior.
 
@@ -82,8 +110,9 @@ Every methodology uses review gates — structured checkpoints where you pause, 
 At each gate:
 1. Summarize what the sub-skill produced
 2. List open questions, risks, assumptions
-3. Present confirmation points explicitly
-4. Wait for user approval before proceeding to the next phase
+3. **Surface conscious trade-offs** — what was included, what was intentionally deferred, and why. If technical debt was taken on, name it and state the conditions under which it should be revisited
+4. Present confirmation points explicitly
+5. Wait for user approval before proceeding to the next phase
 
 If the user wants speed, combine G1+G2 or G3+G4, but never skip entirely.
 
@@ -169,19 +198,19 @@ The orchestrator stays in the main conversation, keeping full context. When dele
 
 ---
 
-## Core operating principles
+## Engineering toolkit
 
-These principles flow through all sub-skills. Mention the relevant ones when delegating:
+These are tools available to sub-skills — not mandates. Apply them when context calls for it, not by default. When delegating, mention which ones are relevant and why, given the team's situation.
 
-- **User Story quality** — well-formed stories with clear acceptance criteria
-- **Developer Experience (DX)** — workflow ergonomics, API usability, error messages
-- **Design by Contract** — preconditions, postconditions, invariants at service boundaries
-- **Clean Architecture** — separated domain, application, adapter, and infrastructure layers
-- **12-Factor App** — config separation, stateless processes, logs as streams, disposability
-- **Domain-Driven Design (DDD)** — bounded contexts, aggregates, entities, value objects, events
-- **ISO 27001 awareness** — for security-sensitive/regulated features, increase rigor
+- **User Story quality** — well-formed stories with clear acceptance criteria (always applicable)
+- **Developer Experience (DX)** — workflow ergonomics, API usability, error messages (always worth considering)
+- **Design by Contract** — preconditions, postconditions, invariants at service boundaries (valuable at integration points; overkill for internal helpers)
+- **Clean Architecture** — separated domain, application, adapter, and infrastructure layers (valuable for complex domains; a tax on simple CRUD)
+- **12-Factor App** — config separation, stateless processes, logs as streams, disposability (relevant for service-based deployments)
+- **Domain-Driven Design (DDD)** — bounded contexts, aggregates, entities, value objects, events (powerful for complex business logic; premature for simple data flows)
+- **ISO 27001 awareness** — access control, audit logging, data classification (scale to regulatory exposure)
 
-Scale rigor to the feature's size and risk. Small internal tools get light treatment.
+The guiding question is always: **does applying this tool serve the project at this stage, or does it add ceremony without proportionate value?** Name the reasoning either way.
 
 ---
 
@@ -219,3 +248,7 @@ Before completing orchestration, verify:
 - Not passing sufficient context to sub-skills
 - Duplicating work that sub-skills should handle
 - Forcing enterprise process on simple internal tools
+- **Applying best practices mechanically** without considering whether they serve this project, this team, this timeline
+- **Making trade-offs silently** — every shortcut or deferral must be named, reasoned, and documented
+- **Treating all features as equally risky** — an internal admin tool and a payment system deserve different rigor
+- **Premature abstraction** — building for hypothetical futures instead of the current reality

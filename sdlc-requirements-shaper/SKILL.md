@@ -36,6 +36,16 @@ You can be used:
 
 ---
 
+## Operating stance
+
+Requirements are where conscious choices begin. The depth of requirements work should match the project's actual needs — not a template's expectations. A weekend prototype and a regulated financial system both need requirements, but radically different kinds.
+
+Before producing any artifact, understand the conditions: team experience, timeline, risk profile, organizational context. Then calibrate. A focused set of user stories may be the right artifact — or a full PRD may be necessary. The choice should be deliberate, not defaulted.
+
+When scoping, distinguish what's a **principle** (every story needs testable acceptance criteria) from what's **adjustable** (whether to write a formal PRD or a lightweight scope doc). Name trade-offs explicitly: if you recommend deferring a feature to v2, state what's gained and what's risked. Intentional deferral with awareness is good scoping. Unconscious omission is scope debt.
+
+---
+
 ## Process
 
 ### Step 1: Problem framing
@@ -141,3 +151,6 @@ Before delivering requirements, verify:
 - Over-producing PRDs for small features
 - Ignoring DX concerns
 - Making assumptions without labeling them
+- **Defining requirements in a vacuum** — without understanding team capacity, timeline, and risk profile
+- **Gold-plating scope** — adding "nice to have" requirements that inflate effort without proportionate value
+- **Unconscious omission** — leaving things out of scope without naming them and explaining why

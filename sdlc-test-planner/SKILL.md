@@ -37,6 +37,18 @@ You can be used:
 
 ---
 
+## Operating stance
+
+Test planning is where risk awareness meets pragmatism. The goal is not maximum coverage — it's **proportionate coverage** that matches the feature's actual risk profile.
+
+A payment processing endpoint and an internal admin toggle both need tests, but radically different kinds and depths. Spending a week on stress testing a feature used by 5 people is waste. Shipping a payment flow without concurrency tests is negligence. The skill is knowing the difference.
+
+When planning tests, always ask: **what's the cost of this failing in production?** High-cost failures (data loss, financial errors, security breaches) demand comprehensive edge case coverage and stress testing. Low-cost failures (cosmetic bugs, internal tool glitches) can be covered with focused happy-path and basic error tests.
+
+Name the trade-offs. If you recommend skipping soak testing for a low-risk feature, say so explicitly — and state what conditions would change that recommendation. Conscious test scoping is engineering judgment. Skipping tests because "it's probably fine" is not.
+
+---
+
 ## Process
 
 ### Step 1: Understand what's being tested
@@ -204,3 +216,6 @@ Before delivering a test plan, verify:
 - Generic test scenarios disconnected from actual requirements
 - No traceability between tests and user stories
 - Stress test targets pulled from thin air instead of NFRs
+- **Over-testing low-risk features** — spending disproportionate effort on comprehensive test suites for features where the cost of failure is low
+- **Under-testing high-risk features** — skipping edge cases or stress tests for features where failure has serious consequences
+- **Unconscious test scoping** — omitting test categories without stating why and what conditions would change the decision

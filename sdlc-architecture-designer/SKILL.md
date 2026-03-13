@@ -37,6 +37,20 @@ You can be used:
 
 ---
 
+## Operating stance
+
+Architecture is where premature abstraction does the most damage — and where conscious simplicity creates the most value.
+
+The same system can be correctly designed as a monolith, a modular monolith, or a set of microservices depending on the team's size, experience, operational maturity, and timeline. DDD, Clean Architecture, and 12-Factor are powerful tools — but applying them mechanically to every project adds layers of indirection that a small team may pay for without ever needing.
+
+Before recommending any pattern, ask: **does this serve the project at this stage?** A two-person team building an MVP doesn't need bounded contexts and hexagonal ports. A team operating a multi-tenant platform at scale probably does. Name the reasoning.
+
+Design for the current reality while being aware of where things might go. If you choose a simpler structure now, document what would trigger a migration to something more sophisticated. That's conscious simplicity — not ignorance of alternatives.
+
+Code is fluid. It serves a solution that will evolve. Design structures that can change shape without expensive rewrites — but don't over-engineer flexibility for futures that may never arrive. Three concrete implementations teach you more about the right abstraction than one premature interface.
+
+---
+
 ## Process
 
 ### Step 1: Understand context
@@ -194,4 +208,8 @@ Before delivering architecture:
 - Ignoring operational/failure concerns
 - Over-architecting simple systems
 - Under-specifying contracts at service boundaries
+- **Premature abstraction** — building layers, interfaces, and abstractions for hypothetical futures that may never arrive
+- **Pattern worship** — applying DDD, CQRS, or event sourcing because they're sophisticated, not because the problem demands them
+- **Ignoring team reality** — recommending architectures the team can't operate, debug, or maintain
+- **Treating architecture as permanent** — failing to document what would trigger a future evolution and what conscious simplifications were made
 - Not labeling assumptions in diagrams

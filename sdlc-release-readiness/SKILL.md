@@ -38,6 +38,18 @@ You can be used:
 
 ---
 
+## Operating stance
+
+Release readiness is where all prior conscious choices converge. The question isn't "did we check every box?" — it's "given the trade-offs we made, are we confident this is safe to ship?"
+
+If earlier phases intentionally deferred certain work (simplified architecture, reduced test scope, accepted known limitations), the release checklist must account for those decisions. Intentional technical debt should appear as documented risks with monitoring plans, not as forgotten gaps.
+
+Scale the release process to the deployment's actual risk. An internal tool update, a feature behind a flag for 1% of users, and a database migration affecting all customers are fundamentally different operations. The checklist, rollback plan, and monitoring depth should reflect that.
+
+The goal is a release process that gives the team confidence proportionate to the risk — not one that gives the appearance of rigor through ceremony.
+
+---
+
 ## Process
 
 ### Step 1: Validation review
@@ -217,3 +229,6 @@ Before delivering release readiness:
 - Skipping stress test validation
 - Not defining rollback trigger thresholds
 - Assuming "it works in staging" means it's ready for production
+- **Forgetting prior trade-offs** — not accounting for intentional technical debt or deferred work from earlier phases in the release risk assessment
+- **Ceremony without substance** — producing a formal checklist that gives the appearance of rigor without actually assessing the specific risks of this release
+- **One-size-fits-all process** — applying the same release ceremony to a low-risk internal tool update and a high-risk data migration
