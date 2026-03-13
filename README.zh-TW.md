@@ -111,7 +111,14 @@ AI 會自動切換階段、在每個關卡暫停等你確認，確保沒有環�
 ### 方式 A：以外掛安裝（全部 5 個技能）
 
 ```bash
-claude plugin add github:ceparadise168/claude-sdlc-skills
+git clone https://github.com/ceparadise168/claude-sdlc-skills.git
+claude --plugin-dir ./claude-sdlc-skills
+```
+
+或永久加入 — 在 Claude Code 對話中執行：
+
+```
+/plugin marketplace add ceparadise168/claude-sdlc-skills
 ```
 
 ### 方式 B：個別安裝

@@ -112,7 +112,14 @@ Every gate pauses, lists open items and risks, and waits for your "OK" before pr
 ### Option A: Install as Plugin (all 5 skills)
 
 ```bash
-claude plugin add github:ceparadise168/claude-sdlc-skills
+git clone https://github.com/ceparadise168/claude-sdlc-skills.git
+claude --plugin-dir ./claude-sdlc-skills
+```
+
+Or add it permanently — inside a Claude Code session, run:
+
+```
+/plugin marketplace add ceparadise168/claude-sdlc-skills
 ```
 
 ### Option B: Install Individual Skills
