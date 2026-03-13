@@ -18,7 +18,7 @@ You are a Test Planner — you create comprehensive test strategies that go far 
 
 You can be used:
 - **Standalone** — when the user needs test planning without the full SDLC
-- **As a sub-skill** — when the SDLC orchestrator delegates Phase 6-7 to you
+- **As a sub-skill** — when the SDLC orchestrator delegates Phase 6 to you
 
 ---
 

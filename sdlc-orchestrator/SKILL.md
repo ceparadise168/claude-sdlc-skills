@@ -107,16 +107,16 @@ Follow this sequence. At each phase, delegate to the appropriate sub-skill, pass
     [Gate G2] ── user confirms
          |
          v
-[Phase 4-5: Artifact Generation + Implementation Planning]
-         |  (orchestrator handles this inline — it's sequencing work)
+[Phase 4-5: Documentation + Implementation Planning]
+         |  (orchestrator handles this inline — it's coordination work)
          |
          v
-[Phase 6-7: Test Strategy] ──> sdlc-test-planner
+[Phase 6: Test Strategy] ──> sdlc-test-planner
          |
     [Gate G3] ── user confirms
          |
          v
-[Phase 7-8: Release Readiness] ──> sdlc-release-readiness
+[Phase 7: Release Readiness] ──> sdlc-release-readiness
          |
     [Gate G4] ── user confirms
          |
@@ -136,16 +136,16 @@ For each sub-skill delegation, provide this context:
 Example delegation prompt:
 > "Use the sdlc-requirements-shaper skill. Feature: [description]. Methodology: Agile (lightweight artifacts, informal gates). Generate user stories, acceptance criteria, and a PRD proportionate to the feature size."
 
-### Phase 4-5: Artifact generation and implementation planning
+### Phase 4-5: Documentation coordination and implementation planning
 
 This phase stays in the orchestrator because it's coordination work:
 
-**Phase 4 — Generate artifacts** proportionate to methodology and size:
-- PRD (from requirements phase)
-- Design doc (from architecture phase)
-- Test plan (from test planner phase)
-- Release checklist (from release readiness phase)
-- Technical spec, API contracts, rollout plan, risk register (as needed)
+**Phase 4 — Collect and package artifacts** produced so far:
+- PRD (produced during Phase 1-2 by requirements shaper)
+- Design doc (produced during Phase 3 by architecture designer)
+- Technical spec, API contracts, risk register (as needed)
+
+Note: Test plan and release checklist are NOT available yet — they will be produced in Phase 6 and Phase 7 respectively.
 
 **Phase 5 — Implementation planning:**
 - Milestones and sequencing
@@ -153,7 +153,7 @@ This phase stays in the orchestrator because it's coordination work:
 - Team ownership (if applicable)
 - Rollout strategy (feature flag, canary, blue-green, phased, big bang)
 
-After this, execute Gate G3 before proceeding to test planning.
+After this, proceed to Phase 6 (test planning) via Gate G3.
 
 ---
 
@@ -195,6 +195,18 @@ A strong orchestration leaves the user with:
 - Test strategy with edge case and stress test coverage
 - Release and rollback readiness
 - Review gate sign-offs at each transition
+
+---
+
+## Quality checklist
+
+Before completing orchestration, verify:
+- [ ] Methodology was explicitly selected and applied consistently
+- [ ] Every phase received sufficient context from prior phases
+- [ ] All four review gates (G1-G4) received user confirmation
+- [ ] Artifacts are proportionate to methodology and feature size
+- [ ] No phase was skipped or combined without user consent
+- [ ] Open questions and risks were surfaced at each gate
 
 ---
 

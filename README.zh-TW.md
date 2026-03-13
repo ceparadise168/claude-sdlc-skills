@@ -214,7 +214,7 @@ sdlc-test-planner/           ← 測試：邊界案例清單、壓測模式、E2
 sdlc-release-readiness/      ← 上線：上線清單、回滾計畫模板
 ```
 
-每個目錄包含 `SKILL.md`（技能定義）和 `references/`（模板和參考文件）。
+每個目錄包含 `SKILL.md`（技能定義）、`references/`（模板和參考文件）和 `evals/`（觸發評測測試案例，用於描述優化）。
 
 ---
 

@@ -174,6 +174,18 @@ Deliver clearly labeled sections:
 
 ---
 
+## Quality checklist
+
+Before delivering architecture:
+- [ ] ASCII diagrams presented and confirmed by user
+- [ ] Uncertain areas marked with [?] or (assumed)
+- [ ] Design by Contract specs defined for every API/service boundary
+- [ ] Domain boundaries identified (bounded contexts, aggregates)
+- [ ] Clean Architecture layers visible and dependency direction correct
+- [ ] Trade-offs and alternatives documented
+
+---
+
 ## Failure modes to avoid
 
 - Designing without understanding requirements first

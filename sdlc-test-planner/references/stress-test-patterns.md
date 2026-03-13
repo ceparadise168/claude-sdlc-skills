@@ -232,10 +232,9 @@ Every stress test should produce a report that answers:
 | SDLC Phase | Stress Test Activity |
 |------------|---------------------|
 | Phase 3 (Architecture) | Define performance targets and capacity expectations |
-| Phase 5 (Implementation planning) | Plan stress test environment and tooling |
-| Phase 6 (Development) | Write stress test scripts alongside feature code |
-| Phase 7 (Validation) | Execute full stress test suite, produce report |
-| Phase 8 (Release) | Stress test results in release checklist, capacity documented |
+| Phase 4-5 (Documentation + Implementation Planning) | Plan stress test environment and tooling |
+| Phase 6 (Test Strategy) | Define stress test scripts, execute full suite, produce report |
+| Phase 7 (Release Readiness) | Stress test results in release checklist, capacity documented |
 
 ---
 

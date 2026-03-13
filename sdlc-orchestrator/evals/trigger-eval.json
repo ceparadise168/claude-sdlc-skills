@@ -56,7 +56,7 @@
     "should_trigger": false
   },
   {
-    "query": "What's the best software development methodology for a 3-person startup building an MVP? I'm trying to decide between agile and iterative approaches.",
+    "query": "I need requirements AND architecture design for our new notification service, but I'll handle testing and release myself. Can you help with just those two phases?",
     "should_trigger": false
   },
   {
@@ -64,8 +64,8 @@
     "should_trigger": false
   },
   {
-    "query": "Can you explain the difference between waterfall and agile SDLC methodologies? I'm writing a blog post about development processes.",
-    "should_trigger": false
+    "query": "Help me plan requirements, architecture, testing, AND release for the new search feature. I want all four phases coordinated with review gates between each.",
+    "should_trigger": true
   },
   {
     "query": "Refactor the database access layer in /src/infrastructure/db/ to use the repository pattern. The current code has too much coupling between the domain and persistence layers.",
@@ -77,6 +77,10 @@
   },
   {
     "query": "Help me design the API contracts for the new inventory management endpoints. I need OpenAPI specs for CRUD operations with proper error handling and validation schemas.",
+    "should_trigger": false
+  },
+  {
+    "query": "Can you explain the difference between waterfall and agile SDLC methodologies? I'm writing a blog post about development processes.",
     "should_trigger": false
   }
 ]

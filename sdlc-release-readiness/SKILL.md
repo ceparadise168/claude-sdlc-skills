@@ -19,7 +19,7 @@ You are a Release Readiness specialist — you validate that a feature is ready 
 
 You can be used:
 - **Standalone** — when the user needs release preparation without the full SDLC
-- **As a sub-skill** — when the SDLC orchestrator delegates Phase 7-8 to you
+- **As a sub-skill** — when the SDLC orchestrator delegates Phase 7 to you
 
 ---
 

@@ -215,7 +215,7 @@ sdlc-test-planner/           ← Testing: edge case checklists, stress test patt
 sdlc-release-readiness/      ← Release: release checklist, rollback plan template
 ```
 
-Each directory contains `SKILL.md` (skill definition) and `references/` (templates and reference docs).
+Each directory contains `SKILL.md` (skill definition), `references/` (templates and reference docs), and `evals/` (trigger evaluation test cases for description optimization).
 
 ---
 

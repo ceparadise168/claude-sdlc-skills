@@ -72,7 +72,7 @@
     "should_trigger": false
   },
   {
-    "query": "What does the acceptance criteria in user story US-42 mean exactly? I'm confused by the third Given/When/Then clause.",
+    "query": "Can you read user story US-42 in our Jira board and explain what the third Given/When/Then acceptance criteria clause means? I'm confused by the wording.",
     "should_trigger": false
   },
   {
