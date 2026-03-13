@@ -6,6 +6,28 @@
 
 ---
 
+## Design Philosophy
+
+Most SDLC tools treat best practices as rules to enforce. These skills treat them as **tools to choose from** — consciously, based on the situation at hand.
+
+This distinction comes from experience. After years of reading best practices, applying them across projects of all sizes, sometimes succeeding, sometimes creating the very mess they were supposed to prevent — a pattern emerges: **the same design that saves one project can strangle another.** What matters is not whether you applied DDD or Clean Architecture, but whether the choice was *conscious* — made with full awareness of the team, the timeline, the risk, and the reality on the ground.
+
+These skills are built on that conviction:
+
+**Structure without dogma.** Every phase provides a framework — user stories, architecture diagrams, test plans, release checklists — but the depth and formality scale to context. An internal tool for 5 users and a payment system for millions of customers both go through the same gates, but with radically different rigor. The skill asks about your situation first, then calibrates.
+
+**Conscious trade-offs over unconscious shortcuts.** When a skill recommends deferring work — skipping a full PRD, simplifying architecture, reducing test scope — it names the trade-off explicitly: what you're gaining, what you're giving up, and what conditions would change the calculus. Intentional technical debt taken with awareness is wisdom. Cutting corners without thinking is just debt.
+
+**Avoid premature abstraction, but think about it.** Not building an abstraction now doesn't mean not considering it. It means you've thought about where things might go and consciously decided the abstraction would constrain more than it helps at this stage. The skills document what was considered and why it was deferred — so the decision can be revisited when the context changes.
+
+**Code is fluid.** It serves a project concept that will evolve — change, shrink, grow. These skills design for that fluidity: structures that can change shape without expensive rewrites, but without over-engineering flexibility for futures that may never arrive. Three concrete implementations teach more about the right abstraction than one premature interface.
+
+**Distinguish the principled from the adjustable.** Some things are non-negotiable (testable acceptance criteria, rollback plans for production). Others flex with context (whether to use DDD, how many architecture layers, how formal the sign-off). The skills name which is which, so you can hold firm where it matters and adapt where it doesn't.
+
+The goal is not to produce the maximum amount of documentation or apply the maximum number of patterns. It's to help you **see the full picture, then make a conscious choice** — with the engineering wisdom of someone who has learned what works through building, not just reading.
+
+---
+
 ## What Is This?
 
 A set of 5 skills for [Claude Code](https://claude.com/claude-code) that provide structured guidance at every stage of software development:
