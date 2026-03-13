@@ -109,26 +109,31 @@ Every gate pauses, lists open items and risks, and waits for your "OK" before pr
 
 - [Claude Code](https://claude.com/claude-code) CLI installed
 
-### One-Line Install (Recommended)
+### Option A: Install as Plugin (all 5 skills)
 
 ```bash
-claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-orchestrator.skill
-claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-requirements-shaper.skill
-claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-architecture-designer.skill
-claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-test-planner.skill
-claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-release-readiness.skill
+claude plugin add github:ceparadise168/claude-sdlc-skills
 ```
 
-### Local Install
+### Option B: Install Individual Skills
+
+Pick only what you need:
 
 ```bash
-git clone https://github.com/ceparadise168/claude-sdlc-skills.git
-cd claude-sdlc-skills
-claude install-skill sdlc-orchestrator.skill
-claude install-skill sdlc-requirements-shaper.skill
-claude install-skill sdlc-architecture-designer.skill
-claude install-skill sdlc-test-planner.skill
-claude install-skill sdlc-release-readiness.skill
+# Orchestrator — coordinates all phases with review gates
+claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-orchestrator.skill
+
+# Requirements — user stories, acceptance criteria, PRD
+claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-requirements-shaper.skill
+
+# Architecture — ASCII diagrams, DDD, API contracts
+claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-architecture-designer.skill
+
+# Test Planning — edge cases, stress tests, E2E scenarios
+claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-test-planner.skill
+
+# Release Readiness — release checklist, rollback plan
+claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-release-readiness.skill
 ```
 
 ---
@@ -226,11 +231,12 @@ AI:   Moving to test planning...
 Want to customize? Source code is in these directories — fork and modify as needed:
 
 ```
-sdlc-orchestrator/           ← Coordinator: methodology selection, gate management, phase sequencing
-sdlc-requirements-shaper/    ← Requirements: user stories, acceptance criteria, PRD template
-sdlc-architecture-designer/  ← Architecture: ASCII diagrams, DDD, DbC, design doc template
-sdlc-test-planner/           ← Testing: edge case checklists, stress test patterns, E2E templates
-sdlc-release-readiness/      ← Release: release checklist, rollback plan template
+skills/
+├── sdlc-orchestrator/           ← Coordinator: methodology selection, gate management, phase sequencing
+├── sdlc-requirements-shaper/    ← Requirements: user stories, acceptance criteria, PRD template
+├── sdlc-architecture-designer/  ← Architecture: ASCII diagrams, DDD, DbC, design doc template
+├── sdlc-test-planner/           ← Testing: edge case checklists, stress test patterns, E2E templates
+└── sdlc-release-readiness/      ← Release: release checklist, rollback plan template
 ```
 
 Each directory contains `SKILL.md` (skill definition), `references/` (templates and reference docs), and `evals/` (trigger evaluation test cases for description optimization).

@@ -1,0 +1,11 @@
+{
+  "name": "claude-sdlc-skills",
+  "description": "Structured SDLC guidance from requirements to release — methodology selection, review gates, architecture diagrams, test planning, and release readiness.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ceparadise168"
+  },
+  "repository": "https://github.com/ceparadise168/claude-sdlc-skills",
+  "license": "MIT",
+  "keywords": ["sdlc", "requirements", "architecture", "testing", "release", "agile", "waterfall"]
+}

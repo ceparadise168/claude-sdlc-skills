@@ -108,26 +108,31 @@ AI 會自動切換階段、在每個關卡暫停等你確認，確保沒有環�
 
 - 已安裝 [Claude Code](https://claude.com/claude-code) CLI
 
-### 一鍵安裝（推薦）
+### 方式 A：以外掛安裝（全部 5 個技能）
 
 ```bash
-claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-orchestrator.skill
-claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-requirements-shaper.skill
-claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-architecture-designer.skill
-claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-test-planner.skill
-claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-release-readiness.skill
+claude plugin add github:ceparadise168/claude-sdlc-skills
 ```
 
-### 本地安裝
+### 方式 B：個別安裝
+
+只挑你需要的：
 
 ```bash
-git clone https://github.com/ceparadise168/claude-sdlc-skills.git
-cd claude-sdlc-skills
-claude install-skill sdlc-orchestrator.skill
-claude install-skill sdlc-requirements-shaper.skill
-claude install-skill sdlc-architecture-designer.skill
-claude install-skill sdlc-test-planner.skill
-claude install-skill sdlc-release-readiness.skill
+# 協調器 — 統籌所有階段，含審查關卡
+claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-orchestrator.skill
+
+# 需求定義 — 用戶故事、驗收標準、PRD
+claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-requirements-shaper.skill
+
+# 架構設計 — ASCII 圖、DDD、API 合約
+claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-architecture-designer.skill
+
+# 測試規劃 — 邊界案例、壓力測試、E2E 場景
+claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-test-planner.skill
+
+# 上線準備 — 上線清單、回滾計畫
+claude install-skill https://raw.githubusercontent.com/ceparadise168/claude-sdlc-skills/main/sdlc-release-readiness.skill
 ```
 
 ---
@@ -202,7 +207,7 @@ AI：進入測試規劃⋯
 
 - **上線清單（Release Checklist）** — 程式碼、測試、文件、安全、基礎設施逐項確認
 - **回滾計畫（Rollback Plan）** — 觸發條件（錯誤率 > X%、延遲 > Y ms）、回滾步驟、驗證方式
-- **部署策略建議** — 功能開關（Feature Flag）/ 金絲雀部署（Canary）/ 藍綠部署（Blue-Green）/ 分階段上線 / 試點（Pilot）
+- **部署策略建議** — 功能開關（Feature Flag）/ 金絲雀部署（Canary）/ 藍綠部署（Blue-Green）/ 分階段上線 / 試點（Pilot）/ 大爆炸（Big Bang）
 - **上線後監控計畫** — 前 24-48 小時該盯哪些指標
 - **正式簽核表** — 適用於需要正式審批的瀑布式流程
 </details>
@@ -225,11 +230,12 @@ AI：進入測試規劃⋯
 想客製化？原始碼在這些目錄裡，歡迎 fork 修改：
 
 ```
-sdlc-orchestrator/           ← 協調器：方法論選擇、關卡管理、階段排序
-sdlc-requirements-shaper/    ← 需求：用戶故事、驗收標準、PRD 模板
-sdlc-architecture-designer/  ← 架構：ASCII 圖、DDD、契約式設計、設計文件模板
-sdlc-test-planner/           ← 測試：邊界案例清單、壓測模式、E2E 模板
-sdlc-release-readiness/      ← 上線：上線清單、回滾計畫模板
+skills/
+├── sdlc-orchestrator/           ← 協調器：方法論選擇、關卡管理、階段排序
+├── sdlc-requirements-shaper/    ← 需求：用戶故事、驗收標準、PRD 模板
+├── sdlc-architecture-designer/  ← 架構：ASCII 圖、DDD、契約式設計、設計文件模板
+├── sdlc-test-planner/           ← 測試：邊界案例清單、壓測模式、E2E 模板
+└── sdlc-release-readiness/      ← 上線：上線清單、回滾計畫模板
 ```
 
 每個目錄包含 `SKILL.md`（技能定義）、`references/`（模板和參考文件）和 `evals/`（觸發評測測試案例，用於描述優化）。

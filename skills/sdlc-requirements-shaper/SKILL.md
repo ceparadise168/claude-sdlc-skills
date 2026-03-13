@@ -110,7 +110,7 @@ When called by the SDLC orchestrator, adapt depth to the methodology:
 | **Agile** | Focused user stories + ACs. Brief problem statement. No heavyweight PRD unless requested. |
 | **Waterfall** | Full PRD with all sections. Formal requirements matrix. Comprehensive stakeholder list. |
 | **Iterative** | User stories + ACs for current iteration. Overall vision documented. PRD grows across iterations. |
-| **Custom** | Match the user's existing process. |
+| **Custom** | Match user's process. |
 
 ---
 
